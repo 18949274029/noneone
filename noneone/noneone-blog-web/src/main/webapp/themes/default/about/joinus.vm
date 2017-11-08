@@ -1,0 +1,22 @@
+#set($title="加入我们")
+
+<div class="shadow-box">
+	<h1 class="post-title">联系我们</h1>
+	<div class="clearfix post-other">
+		<span class="pull-left author">
+			官方团队
+		</span>
+	</div>
+	<div class="post-frame">
+		<div class="post-content">
+			<p><strong>联系我们</strong></p>
+			<p>友情链接交换、意见反馈、商业合作, 您可以邮箱联系我们  邮箱地址：379106481@qq.com <!-- <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=AGxhbmdoc3VAZm94bWFpbC5jb20" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a></p> -->
+			<p><strong>鼓励我们</strong><br/></p>
+			<p>如果你觉得本站给您提供了方便与收获，请帮我们推广</p>
+			<!-- <p>QQ：378433412 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=a26a98f0ba0d5886fe79adac4977b0b42b7ade6f9a10404074d12251ebcca3a8"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Noneone" title="Noneone"></a></p> -->
+
+		</div>
+		<div class="post-footer">
+		</div>
+	</div>
+</div>
