@@ -72,7 +72,7 @@ public class UserPO {
 	private String signature; // 个性签名
 
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "noneones_user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
+	@JoinTable(name = "noneone_user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 	private List<RolePO> roles = new ArrayList<RolePO>();
 
