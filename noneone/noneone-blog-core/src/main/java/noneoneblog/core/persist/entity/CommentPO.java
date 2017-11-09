@@ -10,7 +10,7 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "mto_comments")
+@Table(name = "noneone_comments")
 public class CommentPO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

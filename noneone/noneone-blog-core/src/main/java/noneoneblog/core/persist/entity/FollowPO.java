@@ -14,7 +14,7 @@ import java.util.Date;
  * 
  */
 @Entity
-@Table(name = "mto_follows")
+@Table(name = "noneone_follows")
 @Cache(usage= CacheConcurrencyStrategy.READ_WRITE)
 public class FollowPO {
 	@Id

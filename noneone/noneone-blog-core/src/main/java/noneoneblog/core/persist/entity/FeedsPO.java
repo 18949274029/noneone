@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
  * 
  */
 @Entity
-@Table(name = "mto_feeds")
+@Table(name = "noneone_feeds")
 public class FeedsPO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -19,7 +19,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  * @author leisure
  */
 @Entity
-@Table(name = "mto_notify")
+@Table(name = "noneone_notify")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class NotifyPO {
     @Id

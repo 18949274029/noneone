@@ -26,7 +26,7 @@ import org.hibernate.search.annotations.NumericField;
  * 
  */
 @Entity
-@Table(name = "mto_posts")
+@Table(name = "noneone_posts")
 @Indexed(index = "posts")
 @Analyzer(impl = SmartChineseAnalyzer.class)
 public class PostPO implements Serializable {

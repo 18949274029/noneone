@@ -7,7 +7,7 @@ import javax.persistence.*;
  * @author leisure
  */
 @Entity
-@Table(name = "mto_friend_link")
+@Table(name = "noneone_friend_link")
 public class FriendLinkPO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

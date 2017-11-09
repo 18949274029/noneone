@@ -12,7 +12,7 @@ import java.util.Date;
  * @author leisure
  */
 @Entity
-@Table(name = "mto_verify")
+@Table(name = "noneone_verify")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class VerifyPO {
     @Id

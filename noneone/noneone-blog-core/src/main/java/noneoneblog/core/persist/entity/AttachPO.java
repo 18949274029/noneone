@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * 
  */
 @Entity
-@Table(name = "mto_posts_attach")
+@Table(name = "noneone_posts_attach")
 public class AttachPO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -16,7 +16,7 @@ import org.hibernate.annotations.Type;
  * Created by leisure.
  */
 @Entity
-@Table(name = "mto_posts_attribute")
+@Table(name = "noneone_posts_attribute")
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class PostAttribute implements Serializable {
 	private static final long serialVersionUID = 7829351358884064647L;

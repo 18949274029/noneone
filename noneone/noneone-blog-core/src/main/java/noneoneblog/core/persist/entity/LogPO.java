@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
  *
  */
 @Entity
-@Table(name = "mto_logs")
+@Table(name = "noneone_logs")
 public class LogPO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

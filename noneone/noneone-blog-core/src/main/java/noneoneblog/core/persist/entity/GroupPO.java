@@ -17,7 +17,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  *
  */
 @Entity
-@Table(name = "mto_group")
+@Table(name = "noneone_group")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class GroupPO {
 	@Id
