@@ -8,7 +8,7 @@ import java.util.Date;
  * @author leisure
  */
 @Entity
-@Table(name = "mto_favors")
+@Table(name = "noneone_favors")
 public class FavorPO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

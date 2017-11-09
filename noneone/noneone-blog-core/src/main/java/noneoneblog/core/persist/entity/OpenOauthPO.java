@@ -16,7 +16,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  * @author leisure
  */
 @Entity
-@Table(name = "mto_users_open_oauth")
+@Table(name = "noneone_users_open_oauth")
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class OpenOauthPO {
     @Id

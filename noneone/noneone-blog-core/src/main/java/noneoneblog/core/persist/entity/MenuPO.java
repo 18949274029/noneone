@@ -17,7 +17,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  *
  */
 @Entity
-@Table(name = "mto_menu")
+@Table(name = "noneone_menu")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class MenuPO {
 	@Id
