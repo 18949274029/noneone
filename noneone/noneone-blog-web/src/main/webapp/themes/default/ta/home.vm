@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>$!{user.name} 的Mtons - $!{site_name}</title>
+    <title>$!{user.name} 的Noneone - $!{site_name}</title>
 	#parse("/default/inc/params.vm")
 </head>
 <body>

@@ -30,7 +30,7 @@ public class RolePO {
 	private String name;
 
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "mto_role_menu", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = { @JoinColumn(name = "menu_id") })
+	@JoinTable(name = "noneone_role_menu", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = { @JoinColumn(name = "menu_id") })
 	@Fetch(FetchMode.SUBSELECT)
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 	private List<AuthMenuPO> authMenus = new ArrayList<AuthMenuPO>();

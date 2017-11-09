@@ -40,7 +40,7 @@ public class AuthMenuPO {
 	private List<RolePO> roles = new ArrayList<RolePO>();
 	
 	@ManyToMany(fetch=FetchType.LAZY)
-	@JoinTable(name = "mto_role_menu", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = { @JoinColumn(name = "menu_id") })
+	@JoinTable(name = "noneone_role_menu", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = { @JoinColumn(name = "menu_id") })
 	private List<AuthMenuPO> children = new ArrayList<>();
 
 	public long getId() {
