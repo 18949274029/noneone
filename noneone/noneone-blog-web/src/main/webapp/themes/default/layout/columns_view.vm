@@ -10,7 +10,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>$!{title} - $!{site_name}</title>
-	<meta name="keywords" content="mtons,$!{tags}"/>
+	<meta name="keywords" content="Noneone,$!{tags}"/>
 	<meta name="description" content="$!{summary}"/>
 
 	#parse("/default/inc/params.vm")
