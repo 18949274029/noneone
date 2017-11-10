@@ -100,4 +100,7 @@ public interface Consts {
 
 	String EMAIL_TEMPLATE_FORGOT = "forgot.vm";
 	String EMAIL_TEMPLATE_BIND = "bind.vm";
+	/* 存储模式, 可选值 absolute / relative */
+	String  ABSOLUTE = "absolute";
+	String  RELATIVE  = "relative";
 }

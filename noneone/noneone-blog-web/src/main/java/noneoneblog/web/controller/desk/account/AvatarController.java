@@ -4,7 +4,9 @@ package noneoneblog.web.controller.desk.account;
 import java.io.File;
 
 import noneoneblog.base.context.AppContext;
+import noneoneblog.base.context.Global;
 import noneoneblog.base.data.Data;
+import noneoneblog.base.lang.Consts;
 import noneoneblog.base.utils.FilePathUtils;
 import noneoneblog.base.utils.ImageUtils;
 import noneoneblog.core.data.AccountProfile;
@@ -30,7 +32,7 @@ public class AvatarController extends BaseController {
 	private AppContext appContext;
 	@Autowired
 	private UserService userService;
-
+    
 	@RequestMapping(value = "/avatar", method = RequestMethod.GET)
 	public String view() {
 		return getView(Views.ACCOUNT_AVATAR);
@@ -44,6 +46,11 @@ public class AvatarController extends BaseController {
 			model.put("data", Data.failure("请选择图片"));
 			return getView(Views.ACCOUNT_AVATAR);
 		}
+		////判断存储模式
+		if (Consts.ABSOLUTE.equals(Global.getConfig("store.repo"))) {
+			path.substring(Global.getImageHost().length());
+		}
+		
 		
 		if (width != null && height != null) {
 			String root = fileRepoFactory.select().getRoot();
