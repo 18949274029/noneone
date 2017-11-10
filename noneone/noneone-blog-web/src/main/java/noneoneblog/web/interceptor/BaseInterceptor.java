@@ -4,6 +4,8 @@ package noneoneblog.web.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import noneoneblog.base.context.AppContext;
+import noneoneblog.base.context.Global;
 import noneoneblog.core.hook.interceptor.InterceptorHookManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,6 @@ public class BaseInterceptor extends HandlerInterceptorAdapter {
 
 	@Autowired
 	private InterceptorHookManager interceptorHookManager;
-
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		interceptorHookManager.preHandle(request, response, handler);

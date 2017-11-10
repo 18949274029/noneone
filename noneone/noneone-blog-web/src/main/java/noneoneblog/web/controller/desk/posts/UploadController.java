@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import noneoneblog.base.context.Global;
 import noneoneblog.base.data.Data;
 import noneoneblog.web.controller.BaseController;
 
@@ -62,7 +63,7 @@ public class UploadController extends BaseController {
             } else {
                 path = fileRepoFactory.select().temp(file, appContext.getTempDir());
             }
-            data = Data.success("", path);
+            data = Data.success("", Global.getImageHost()+path);
         } catch (Exception e) {
             //FIXME: error handle
 

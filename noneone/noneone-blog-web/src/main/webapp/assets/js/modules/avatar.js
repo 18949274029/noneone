@@ -8,8 +8,8 @@ define(function(require, exports, module) {
 	var jcrop_api;
 	var jcrop_init = false;
 	var upload_url = app.base + '/post/upload?scale=true&size=300';
-	var base_url = app.base;
-	
+//	var base_url = app.base;
+	var base_url = "";
 	function getRandom() {
 		var dim = jcrop_api.getBounds();
 		return [
