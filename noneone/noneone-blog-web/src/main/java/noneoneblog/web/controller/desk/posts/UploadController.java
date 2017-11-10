@@ -7,6 +7,8 @@ import java.util.Map;
 
 import noneoneblog.base.context.Global;
 import noneoneblog.base.data.Data;
+import noneoneblog.base.lang.Consts;
+import noneoneblog.base.utils.AbsoluteuUtils;
 import noneoneblog.web.controller.BaseController;
 
 import org.springframework.stereotype.Controller;
@@ -63,7 +65,10 @@ public class UploadController extends BaseController {
             } else {
                 path = fileRepoFactory.select().temp(file, appContext.getTempDir());
             }
-            data = Data.success("", Global.getImageHost()+path);
+        	if (AbsoluteuUtils.isAbsolute()) {
+				path = Global.getImageHost()+path;
+			}
+            data = Data.success("", path);
         } catch (Exception e) {
             //FIXME: error handle
 

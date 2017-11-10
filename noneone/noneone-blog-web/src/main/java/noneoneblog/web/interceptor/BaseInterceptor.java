@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import noneoneblog.base.context.AppContext;
 import noneoneblog.base.context.Global;
+import noneoneblog.base.utils.AbsoluteuUtils;
 import noneoneblog.core.hook.interceptor.InterceptorHookManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,12 @@ public class BaseInterceptor extends HandlerInterceptorAdapter {
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 		request.setAttribute("base", request.getContextPath());
+		request.setAttribute("resource", Global.getImageHost());
+		request.setAttribute("isAbsolute", AbsoluteuUtils.isAbsolute());
 		interceptorHookManager.postHandle(request,response,handler,modelAndView);
 	}
-
+   
+	
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 		super.afterCompletion(request, response, handler, ex);

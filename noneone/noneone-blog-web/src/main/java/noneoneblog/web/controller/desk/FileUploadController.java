@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import noneoneblog.base.context.Global;
 import noneoneblog.base.data.UMEditorResult;
+import noneoneblog.base.lang.Consts;
+import noneoneblog.base.utils.AbsoluteuUtils;
 import noneoneblog.web.controller.BaseController;
 
 import org.springframework.stereotype.Controller;
@@ -63,6 +65,10 @@ public class FileUploadController extends BaseController {
 				if (this.checkFileType(fileName)) {
 					try {
 						String path = fileRepoFactory.select().storeScale(file, appContext.getThumbsDir(), 600);
+					////判断存储模式
+						if (AbsoluteuUtils.isAbsolute()) {
+							path = Global.getImageHost()+path;
+						}
 						data.setName(fileName);
 						data.setOriginalName(fileName);
 						data.setType(getSuffix(fileName));
