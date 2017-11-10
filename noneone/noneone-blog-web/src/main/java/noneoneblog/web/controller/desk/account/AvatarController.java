@@ -48,7 +48,7 @@ public class AvatarController extends BaseController {
 		}
 		////判断存储模式
 		if (Consts.ABSOLUTE.equals(Global.getConfig("store.repo"))) {
-			path.substring(Global.getImageHost().length());
+			path = path.substring(Global.getImageHost().length());
 		}
 		
 		
