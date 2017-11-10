@@ -33,7 +33,7 @@
 var hot_li_template = '<li><div class="li-out"><span class="last"><i>{0}</i></span><span class="name"><a  href="{1}">{2}</a></span><span class="nums">{3}</span></div></li>'
 var latest_li_template = '<li><div class="li-out"><span class="name"><a  href="{1}">{2}</a></span><span class="nums">{3}</span></div></li>'
 
-var hotUser_li_template = '<li class="img"><a  href="{1}"><img src="$base{0}" class=""/></a></li>';
+var hotUser_li_template = '<li class="img"><a  href="{1}"><img src="#resource({0})" class=""/></a></li>';
 
 seajs.use('sidebox', function (sidebox) {
 	sidebox.init({
