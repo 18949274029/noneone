@@ -76,7 +76,7 @@ public class FollowServiceImpl implements FollowService {
 	@Override
 	@Transactional(readOnly = true)
 	public Page<User> follows(Pageable pageable, long userId) {
-		Page<FollowPO> page = followDao.findAllByFollow(pageable, new UserPO(userId));
+		Page<FollowPO> page = followDao.findAllByUser(pageable, new UserPO(userId));
 		List<User> rets = new ArrayList<>();
 
 		for (FollowPO po : page.getContent()) {
@@ -88,7 +88,7 @@ public class FollowServiceImpl implements FollowService {
 	@Override
 	@Transactional(readOnly = true)
 	public Page<User> fans(Pageable pageable, long userId) {
-		Page<FollowPO> page = followDao.findAllByUser(pageable, new UserPO(userId));
+		Page<FollowPO> page = followDao.findAllByFollow(pageable, new UserPO(userId));
 		List<User> rets = new ArrayList<>();
 
 		for (FollowPO po : page.getContent()) {

@@ -25,7 +25,7 @@ public class TagController extends BaseController {
     @Autowired
     private PostService postService;
 
-    @RequestMapping("/tag/{tag}")
+    @RequestMapping(value="/tag/{tag}")
     public String tag(@PathVariable String tag, ModelMap model) {
         Pageable pageable = wrapPageable();
         try {
