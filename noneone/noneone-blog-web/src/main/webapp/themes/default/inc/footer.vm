@@ -23,7 +23,7 @@
 	<div class="container mode-link">
         <h3 class="t-h3">友情链接</h3>
         <ul class="list-inline">
-            <li><a href="https://www.baidu.com" target="_blank" title="度娘">度娘</a></li>
+            <li><a href="https://www.baidu.com" target="_blank" title="百度">百度</a></li>
 			#foreach($link in $friendLinks)
                 <li>
                     <a href="${link.url}" target="_blank" title="${link.remark}">${link.siteName}</a>
@@ -35,7 +35,7 @@
 		<span>$!{site_copyright} <a
 			href="http://www.miitbeian.gov.cn/" target="_blank">$!{site_icp}</a>
 		</span>
-		<span class="pull-right">Powered By <a href="#" target="_blank">Noneone</a></span>
+		<span class="pull-right">Copyright © 2017-2020, <a href="#" target="_blank">Noneone,</a> All Rights Reserved</span>
 	</div>
 
 </footer>
