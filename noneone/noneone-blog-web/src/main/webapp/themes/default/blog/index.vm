@@ -29,6 +29,6 @@
 </div>
 <div class="text-center clr">
 	#set($url = "$!{group.key}?ord=" + ${ord})
-	#page($url $paging 5)
+	#page($url $page 5)
 </div>
 #end
