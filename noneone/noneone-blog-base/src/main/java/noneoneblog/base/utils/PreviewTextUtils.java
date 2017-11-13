@@ -61,5 +61,15 @@ public class PreviewTextUtils {
 
     public static void main(String[] args) {
         System.out.println(PreviewTextUtils.getText("<script>alert</script>test  ", 5));
+        String s = " <p>&lt;iframe height=498 width=510 src='http://player.youku.com/embed/XMzE0OTkyNTQ5Mg==' frameborder=0 'allowfullscreen'&gt;&lt;/iframe&gt; &nbsp; sadasd</p>";
+        System.out.println(getChangeHTML(s));
     }
+    
+    /**
+     * 替换文本中的< > 符号
+     */
+    public static String getChangeHTML(String fromString){
+    	return fromString.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&nbsp;", " "); 
+    }
+    
 }

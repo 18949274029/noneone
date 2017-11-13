@@ -265,7 +265,7 @@ public class PostServiceImpl implements PostService {
 
 		po.setCreated(new Date());
 		po.setStatus(EntityStatus.ENABLED);
-
+        post.setContent(post.getContent()==null?null:PreviewTextUtils.getChangeHTML(post.getContent()));
 		// 处理摘要
 		if (StringUtils.isBlank(post.getSummary())) {
 			po.setSummary(trimSummary(post.getContent()));
