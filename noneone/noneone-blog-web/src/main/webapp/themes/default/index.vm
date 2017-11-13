@@ -25,6 +25,6 @@
     </div>
     <div class="text-center clr">
     	#set($url = "index?ord=" + ${ord})
-    	#page($url $paging 5)
+    	#page($url $page 5)
     </div>
 #end
