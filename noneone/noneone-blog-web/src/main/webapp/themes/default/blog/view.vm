@@ -23,13 +23,7 @@
 	</div>
 	<div class="post-frame">
 		<div class="post-content">
-			<!--${ret.content} -->
-			<html>
- <head></head>
- <body>
-  <p><iframe height=498 width=510 src='http://player.youku.com/embed/XMzE0OTkyNTQ5Mg==' frameborder=0 'allowfullscreen'></iframe>; &nbsp; sadasd</p>
- </body>
-</html>
+			${ret.content}
 		</div>
 		<div class="post-footer">
             <div class="tip">分享到：</div>
