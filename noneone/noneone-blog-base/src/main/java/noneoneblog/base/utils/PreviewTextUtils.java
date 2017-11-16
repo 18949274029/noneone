@@ -2,11 +2,11 @@
 package noneoneblog.base.utils;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.safety.Whitelist;
-import org.springframework.web.util.HtmlUtils;
 
 /**
  * Created by leisure
@@ -69,7 +69,12 @@ public class PreviewTextUtils {
      * 替换文本中的< > 符号
      */
     public static String getChangeHTML(String fromString){
-    	return fromString.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&nbsp;", " "); 
+    	if (StringUtils.isNotEmpty(fromString)) {
+
+    		fromString =  StringEscapeUtils.unescapeHtml4(fromString);
+//    		fromString = fromString.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&nbsp;", " ").replaceAll("&#x3D;", "=").replaceAll("&quot;", "\"");
+		}
+    	return fromString; 
     }
     
 }
