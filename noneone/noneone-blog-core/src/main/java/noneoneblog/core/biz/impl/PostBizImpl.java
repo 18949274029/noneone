@@ -47,7 +47,7 @@ public class PostBizImpl implements PostBiz {
 	 * @return
 	 */
 	@Override
-//	@Cacheable(value = "postsCaches", key = "'list_' + #group + #ord + '_' + #pageable.getPageNumber() + '_' + #pageable.getPageSize()")
+	@Cacheable(value = "postsCaches", key = "'list_' + #group + #ord + '_' + #pageable.getPageNumber() + '_' + #pageable.getPageSize()")
 	public Page<Post> paging(Pageable pageable, int group, String ord) {
 		return postService.paging(pageable, group, ord, true);
 	}
