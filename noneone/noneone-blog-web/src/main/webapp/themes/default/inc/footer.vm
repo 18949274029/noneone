@@ -31,11 +31,11 @@
 			#end
         </ul>
     </div>
-	<div class="container copy-right">
+	<div class="container copy-right" style="text-align: center;">
 		<span>$!{site_copyright} <a
 			href="http://www.miitbeian.gov.cn/" target="_blank">$!{site_icp}</a>
 		</span>
-		<span class="pull-right">Copyright © 2017-2020, <a href="#" target="_blank">Noneone,</a> All Rights Reserved</span>
+		<!-- <span class="pull-right">Copyright © 2017-2020, <a href="#" target="_blank">Noneone,</a> All Rights Reserved</span> -->
 	</div>
 
 </footer>
