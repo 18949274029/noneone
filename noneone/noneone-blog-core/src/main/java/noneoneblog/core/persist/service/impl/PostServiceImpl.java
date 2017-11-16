@@ -67,7 +67,9 @@ public class PostServiceImpl implements PostService {
 
 			List<Order> orders = new ArrayList<>();
 			orders.add(builder.desc(root.<Long>get("featured")));
-			orders.add(builder.desc(root.<Long>get("created")));
+			if(Consts.order.NEWEST.equals(ord)){
+				orders.add(builder.desc(root.<Long>get("created")));
+			}
 
 			Predicate predicate = builder.conjunction();
 

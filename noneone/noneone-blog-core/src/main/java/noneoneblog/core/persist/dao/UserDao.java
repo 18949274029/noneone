@@ -19,7 +19,7 @@ public interface UserDao extends JpaRepository<UserPO, Long>, JpaSpecificationEx
 
     UserPO findByEmail(String email);
     
-    List<UserPO> findTop12ByOrderByFansDesc();
+    List<UserPO> findTop6ByOrderByFansDesc();
 
     Page<UserPO> findAllByOrderByIdDesc(Pageable pageable);
 

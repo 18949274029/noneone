@@ -179,7 +179,7 @@ public class UserServiceImpl implements UserService {
 	@Transactional(readOnly = true)
 	public List<User> findHotUserByfans(){
 		List<User> rets = new ArrayList<>();
-		List<UserPO> list = userDao.findTop12ByOrderByFansDesc();
+		List<UserPO> list = userDao.findTop6ByOrderByFansDesc();
 		for (UserPO po : list) {
 			User u = BeanMapUtils.copy(po , 0);
 			rets.add(u);
