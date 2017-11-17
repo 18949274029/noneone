@@ -14,6 +14,7 @@ import noneoneblog.core.persist.entity.AttachPO;
 import noneoneblog.core.persist.service.AttachService;
 import noneoneblog.core.persist.utils.BeanMapUtils;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -94,8 +95,10 @@ public class AttachServiceImpl implements AttachService {
 		attachDao.deleteAllByToId(toId);
 
 		for (Attach d : albums) {
-			d.setToId(toId);
-			lastId = add(d);
+			if (StringUtils.isNotEmpty(d.getOriginal())&&d.getOriginal().startsWith("http")) {
+				d.setToId(toId);
+				lastId = add(d);
+			}
 		}
 //		attachDao.batchAdd(albums);
 		return lastId;
