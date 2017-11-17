@@ -3,6 +3,7 @@ package noneoneblog.base.email.impl;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import noneoneblog.base.context.AppContext;
@@ -87,13 +88,45 @@ public class EmailSenderImpl implements EmailSender {
         Properties props = new Properties();
         props.setProperty("mail.smtp.auth", "true");
         props.setProperty("mail.smtp.timeout", "25000");
-
+        props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        props.setProperty("mail.smtp.port", "465");
         sender.setJavaMailProperties(props);
 
         // 标记加载完毕
         inited = true;
     }
 
+//    public static void main(String[] args) throws MessagingException {
+//    	 String host = "smtp.qq.com";
+//         String username = "379106481@qq.com";
+//         String password = "iwdakfovuxlabgch";
+//
+//         if (StringUtils.isEmpty(host) || StringUtils.isEmpty(username) ||  StringUtils.isEmpty(password)) {
+//             throw new MtonsException(" 系统配置中的 mail.* 相关配置不完整, 不能正常使用邮件服务!");
+//         }
+//
+//         JavaMailSenderImpl sendersender = new JavaMailSenderImpl();
+//         sendersender.setHost(host);
+//         sendersender.setDefaultEncoding("UTF-8");
+//         sendersender.setUsername(username);
+//         sendersender.setPassword(password);
+//
+//         Properties props = new Properties();
+//         props.setProperty("mail.smtp.auth", "true");
+//         props.setProperty("mail.smtp.timeout", "25000");
+//     
+//         
+//         sendersender.setJavaMailProperties(props);
+//         MimeMessage msg = sendersender.createMimeMessage();
+//         MimeMessageHelper message = new MimeMessageHelper(msg, true, "UTF-8");
+//         message.setFrom(sendersender.getUsername());
+//         message.setSubject("hhh");
+//         message.setTo("379106481@qq.com");
+//         message.setText("hhhhhhh", true);
+//         sendersender.send(msg);
+//         
+//	}
+    
     private String getDomain() {
         if (domain == null) {
             domain = appContext.getConfig().get(SiteConfig.SITE_DOMAIN);
