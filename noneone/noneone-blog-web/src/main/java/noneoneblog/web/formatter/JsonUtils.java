@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
  */
 @Component
 public class JsonUtils {
-	private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
+	private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 	private static final ObjectMapper mapper;
 
 	public ObjectMapper getMapper() {

@@ -39,7 +39,7 @@
 							<a href="$base/view/${row.id}" target="_blank">$!{row.title}</a>
 						</td>
     					<td>$!{row.author.username}</td>
-    					<td>$date.format('yyyy-MM-dd', $row.created)</td>
+    					<td>$date.format('yyyy-MM-dd HH:mm:ss', $row.created)</td>
 						<td>${row.views}</td>
                         <td>
 							#if(${row.featured} > 0)

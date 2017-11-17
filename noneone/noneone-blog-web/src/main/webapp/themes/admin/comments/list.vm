@@ -39,7 +39,7 @@
                         <td>$string.abbreviate("$!{row.content}", 64)</td>
 						<td>$!{row.toId}</td>
     					<td>$!{row.author.username}</td>
-    					<td>$date.format('yyyy-MM-dd', $row.created)</td>
+    					<td>$date.format('yyyy-MM-dd HH:mm:ss', $row.created)</td>
 						#if($shiro.hasPermission("comments:edit"))
 							<td class="text-center" align="left">
 								<a href="javascript:void(0);" class="btn btn-mini btn-white" data-id="${row.id}" data-action="delete">
