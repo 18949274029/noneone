@@ -139,11 +139,11 @@
 
 ## 文章附件显示
 #macro (albShow $att)
-	#if($att.store == 1)
+	<!-- #if($att.store == 1) -->
         <img src="$base/assets/images/spinner-overlay.png" data-original="${att.preview}"/>
-	#else
+	<!-- #else
         <img src="$base/assets/images/spinner-overlay.png" data-original="#resource(${att.preview})"/>
-	#end
+	#end -->
 #end
 
 ## 用户头像显示
