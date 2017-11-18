@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
  * @author leisure
  */
 public class ImageRemarkUtil {
-	private static float alpha = 0.2f; // 水印透明度
+	private static float alpha = 0.3f; // 水印透明度
 	private static int positionWidth = 800; // 水印横向位置
 	private static int positionHeight = 300; // 水印纵向位置
 	private static Font font = new Font("宋体", Font.BOLD, 72); // 水印文字字体
