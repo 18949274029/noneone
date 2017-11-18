@@ -26,9 +26,9 @@ define(function(require, exports, module) {
 			var that = this;
 
 			// 手机端跳过加载侧边栏
-			if(noneoneblog && (noneoneblog.browser.ios || noneoneblog.browser.android)) {
-				return false;
-			}
+//			if(noneoneblog && (noneoneblog.browser.ios || noneoneblog.browser.android)) {
+//				return false;
+//			}
         	// load hots
 			if (opts.hotUrl) {
 
