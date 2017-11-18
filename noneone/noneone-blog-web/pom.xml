@@ -87,10 +87,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.mtons.mblog</groupId>
-			<artifactId>mblog-api</artifactId>
+			<groupId>com.noneone.blog</groupId>
+			<artifactId>noneone-api</artifactId>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mblog-api-1.1.3.jar</systemPath>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/noneone-api-1.0.jar</systemPath>
 		</dependency>
 
 	</dependencies>
