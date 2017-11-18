@@ -13,6 +13,7 @@ import noneoneblog.base.lang.MtonsException;
 import noneoneblog.base.upload.FileRepo;
 import noneoneblog.base.upload.FileRepoFactory;
 import noneoneblog.base.utils.FileNameUtils;
+import noneoneblog.base.utils.ImageRemarkUtil;
 import noneoneblog.base.utils.ImageUtils;
 
 import org.apache.commons.io.FileUtils;
@@ -163,6 +164,9 @@ public abstract class AbstractFileRepo implements FileRepo {
 			// 根据临时文件生成略缩图
 			String dest = root + basePath + path;
 			ImageUtils.scaleImageByWidth(temp.getAbsolutePath(), dest, maxWidth);
+			//打水印
+			String iconPath= root + appContext.getRemarkImgPath();
+			ImageRemarkUtil.markImageByIcon(iconPath, dest, dest, -45);
 
 		} catch (Exception e) {
 			throw e;

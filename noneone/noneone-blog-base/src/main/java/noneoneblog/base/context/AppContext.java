@@ -23,6 +23,12 @@ public class AppContext implements ServletContextAware {
 	String root = "/data/noneoneblog";
 	
 	/*
+	 * 水印图片地址
+	 */
+	@Value("#{configProperties['remarkImg.path']}")
+	String remarkImgPath = "/assets/images/remark/remark.png";
+	
+	/*
 	 * 文件存储-原文件目录
 	 */
 	String origDir = "/store/orig";
@@ -115,4 +121,13 @@ public class AppContext implements ServletContextAware {
 	public ServletContext getServletContext() {
 		return servletContext;
 	}
+
+	public String getRemarkImgPath() {
+		return remarkImgPath;
+	}
+
+	public void setRemarkImgPath(String remarkImgPath) {
+		this.remarkImgPath = remarkImgPath;
+	}
+	
 }

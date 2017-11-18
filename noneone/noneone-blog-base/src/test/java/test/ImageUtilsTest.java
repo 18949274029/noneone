@@ -5,7 +5,7 @@ import java.io.IOException;
 import noneoneblog.base.utils.ImageUtils;
 
 /**
- * @author langhsu on 2015/9/4.
+ * @author leisure 
  */
 public class ImageUtilsTest {
     public static void main(String[] args) throws InterruptedException, IOException {

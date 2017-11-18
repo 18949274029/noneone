@@ -4,7 +4,7 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.web.util.HtmlUtils;
 
 /**
- * @author langhsu on 2015/8/29.
+ * @author leisure
  */
 public class PreviewTextUtilsTest {
 
