@@ -20,8 +20,8 @@
 	<!-- JavaScript -->
 	
 	<script src="https://cdn.bootcss.com/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="$base/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="$base/assets/vendors/validate/jquery-validate.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
 	
 	<!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="http://mtons.com/assets/images/logo/m99.png"/>
