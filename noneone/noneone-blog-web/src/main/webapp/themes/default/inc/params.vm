@@ -4,8 +4,8 @@ $!{site_metas}
 <script src="https://cdn.bootcss.com/pace/1.0.2/pace.js"></script>
 <link href="$base/assets/vendors/pace/themes/pace-theme-minimal.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
-<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
 <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link rel='stylesheet' media='all' href='$base/assets/css/style.css'/>
 <link rel='stylesheet' media='all' href='$base/assets/css/layout.css'/>

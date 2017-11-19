@@ -13,18 +13,18 @@
 	$!{site_metas}
 
 	<!-- v3 -->
-	 <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
+	 <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="$base/assets/css/login.css">
 	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 	
 	<!-- JavaScript -->
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-	<script src="http://www.noneone.cn:8081/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
+	<script src="https://www.noneone.cn/static/js/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
 	<script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	
 	<!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" href="http://mtons.com/assets/images/logo/m99.png"/>
+    <link rel="apple-touch-icon-precomposed" href="$base/assets/images/logo/m99.png"/>
     <link rel="shortcut icon" href="$base/assets/images/logo/m.png"/>
 
 </head>

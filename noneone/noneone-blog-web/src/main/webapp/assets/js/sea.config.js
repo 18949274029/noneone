@@ -3,19 +3,19 @@ seajs.config({
         'jquery': 'https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js',
         '$': 'https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js',
         'jquery.migrate': 'https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js',
-        'plugins': 'http://www.noneone.cn:8081/noneoneblog/assets/js/plugins.js',
+        'plugins': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/plugins.js',
 
             /* modules */
-        'main': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/main.js',
-        'authc': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/authc.js',
-        'sidebox': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/sidebox.js',
-        'post': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/post.js',
-        'comment': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/comment.js',
-        'phiz': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/phiz.js',
-        'avatar': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/avatar.js',
-        'editor': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/editor.js',
-        'view': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/view.js',
-        'webuploader': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/webuploader.js',
+        'main': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/main.js',
+        'authc': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/authc.js',
+        'sidebox': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/sidebox.js',
+        'post': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/post.js',
+        'comment': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/comment.js',
+        'phiz': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/phiz.js',
+        'avatar': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/avatar.js',
+        'editor': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/editor.js',
+        'view': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/view.js',
+        'webuploader': 'https://www.noneone.cn/static/js/noneoneblog/assets/js/modules/webuploader.js',
 
             /* vendors */
         'bootstrap': 'https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.js',
@@ -24,12 +24,12 @@ seajs.config({
         'pace': 'https://cdn.bootcss.com/pace/1.0.2/pace',
         'pjax': 'https://cdn.bootcss.com/jquery.pjax/1.7.0/jquery.pjax',
         'jcrop': 'https://cdn.bootcss.com/jquery-jcrop/0.9.12/js/jquery.Jcrop.min',
-        'validate': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/validate/jquery-validate.js',
+        'validate': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/validate/jquery-validate.js',
         'lazyload': 'https://cdn.bootcss.com/jquery_lazyload/1.9.3/jquery.lazyload.js',
 
-        'ueditor': 'http://ueditor.baidu.com/ueditor/ueditor.all',
-        'ueditor.config': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.config.js',
-        'ueditor.parse': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.parse.min.js'
+        'ueditor': 'https://ueditor.baidu.com/ueditor/ueditor.all',
+        'ueditor.config': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/ueditor/ueditor.config.js',
+        'ueditor.parse': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/ueditor/ueditor.parse.min.js'
     },
 
     // 预加载项
