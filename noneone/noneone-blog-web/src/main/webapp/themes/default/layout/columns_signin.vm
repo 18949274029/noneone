@@ -19,7 +19,7 @@
 	
 	<!-- JavaScript -->
 	
-	<script type="text/javascript" src="$base/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="$base/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="$base/assets/vendors/validate/jquery-validate.js"></script>
 	
