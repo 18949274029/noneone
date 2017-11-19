@@ -43,7 +43,7 @@
 <a href="#" class="site-scroll-top"></a>
 
 <script type="text/javascript">
-    seajs.use('$base/assets/js/modules/main.js', function (main) {
+    seajs.use('main', function (main) {
         main.init();
     });
 </script>
