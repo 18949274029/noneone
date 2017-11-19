@@ -27,7 +27,7 @@ seajs.config({
         'validate': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/validate/jquery-validate.js',
         'lazyload': 'https://cdn.bootcss.com/jquery_lazyload/1.9.3/jquery.lazyload.js',
 
-        'ueditor': 'https://ueditor.baidu.com/ueditor/ueditor.all',
+        'ueditor': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/ueditor/ueditor.all.min.js',
         'ueditor.config': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/ueditor/ueditor.config.js',
         'ueditor.parse': 'https://www.noneone.cn/static/js/noneoneblog/assets/vendors/ueditor/ueditor.parse.min.js'
     },
