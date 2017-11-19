@@ -5,9 +5,8 @@ $!{site_metas}
 <link href="$base/assets/vendors/pace/themes/pace-theme-minimal.css" rel="stylesheet" />
 
 <link rel='stylesheet' media='all' href='$base/assets/vendors/font-awesome/css/font-awesome.min.css'/>
-<!-- <link rel="stylesheet" media='all' href="$base/assets/vendors/bootstrap/css/bootstrap.min.css"> -->
- <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
-<link rel="stylesheet" media='all' href="$base/assets/vendors/animate/animate.min.css">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link rel='stylesheet' media='all' href='$base/assets/css/style.css'/>
 <link rel='stylesheet' media='all' href='$base/assets/css/layout.css'/>
 <link rel='stylesheet' media='all' href='$base/assets/css/plugins.css'/>
@@ -15,13 +14,11 @@ $!{site_metas}
 
 <link rel='stylesheet' media='all' href="$base/assets/vendors/baguette/baguetteBox.min.css"/>
 
-<!-- <script type="text/javascript" src="$base/assets/js/jquery.min.js"></script> -->
   <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="$base/assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="$base/assets/js/utils.js"></script>
 
-<script type="text/javascript" src="$base/assets/vendors/layer/layer.js"></script>
-
+<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
 <script type="text/javascript" src="$base/assets/js/sea.js"></script>
 <script type="text/javascript" src="$base/assets/js/sea.config.js"></script>
 

@@ -13,15 +13,12 @@
 	$!{site_metas}
 
 	<!-- v3 -->
-	<!-- <link rel="stylesheet" href="$base/assets/vendors/bootstrap/css/bootstrap.min.css"> -->
 	 <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="$base/assets/css/login.css">
-	<link rel="stylesheet" href="$base/assets/vendors/animate/animate.min.css">
+	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 	
 	<!-- JavaScript -->
 	
-	<!-- <script type="text/javascript" src="$base/assets/js/jquery.min.js"></script> -->
-	  <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="$base/assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="$base/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="$base/assets/vendors/validate/jquery-validate.js"></script>
