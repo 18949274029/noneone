@@ -18,10 +18,10 @@
 	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 	
 	<!-- JavaScript -->
-	
-	<script src="https://cdn.bootcss.com/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-	<script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://www.noneone.cn:8081/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	
 	<!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="http://mtons.com/assets/images/logo/m99.png"/>

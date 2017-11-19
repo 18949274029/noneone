@@ -1,47 +1,47 @@
 seajs.config({
     alias: {
-        'jquery': 'jquery.min',
-        '$': 'jquery.min',
-        'jquery.migrate': 'jquery-migrate-1.2.1.min',
-        'plugins': 'plugins',
+        'jquery': 'https://cdn.bootcss.com/jquery/1.9.1/jquery.min',
+        '$': 'https://cdn.bootcss.com/jquery/1.9.1/jquery.min',
+        'jquery.migrate': 'https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min',
+        'plugins': 'http://www.noneone.cn:8081/noneoneblog/assets/js/plugins',
 
             /* modules */
-        'main': 'modules/main',
-        'authc': 'modules/authc',
-        'sidebox': 'modules/sidebox',
-        'post': 'modules/post',
-        'comment': 'modules/comment',
-        'phiz': 'modules/phiz',
-        'avatar': 'modules/avatar',
-        'editor': 'modules/editor',
-        'view': 'modules/view',
-        'webuploader': 'modules/webuploader',
+        'main': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/main',
+        'authc': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/authc',
+        'sidebox': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/sidebox',
+        'post': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/post',
+        'comment': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/comment',
+        'phiz': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/phiz',
+        'avatar': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/avatar',
+        'editor': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/editor',
+        'view': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/view',
+        'webuploader': 'http://www.noneone.cn:8081/noneoneblog/assets/js/modules/webuploader',
 
             /* vendors */
-        'bootstrap': 'vendors/bootstrap/js/bootstrap.min',
-        'baguetteBox': 'vendors/baguette/baguetteBox.min',
-        'layer': 'vendors/layer/layer',
-        'pace': 'vendors/pace/pace.min',
-        'pjax': 'vendors/pjax/jquery.pjax',
-        'dmuploader': 'vendors/uploader/dmuploader',
-        'webuploader.min': 'vendors/webuploader/webuploader.min',
-        'webuploader.css': 'vendors/webuploader/webuploader.css',
-        'jcrop': 'vendors/jcrop/jquery.jcrop.min',
-        'validate': 'vendors/validate/jquery-validate',
-        'lazyload': 'vendors/lazyload/jquery.lazyload',
+        'bootstrap': 'https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap',
+        'baguetteBox': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/baguette/baguetteBox.min',
+        'layer': 'https://cdn.bootcss.com/layer/2.1/layer.js',
+        'pace': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/pace/pace.min',
+        'pjax': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/pjax/jquery.pjax',
+        'dmuploader': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/uploader/dmuploader',
+        'webuploader.min': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/webuploader/webuploader.min',
+        'webuploader.css': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/webuploader/webuploader.css',
+        'jcrop': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/jcrop/jquery.jcrop.min',
+        'validate': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/validate/jquery-validate',
+        'lazyload': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/lazyload/jquery.lazyload',
 
-        'ueditor': 'vendors/ueditor/ueditor.all.min',
-        'ueditor.config': 'vendors/ueditor/ueditor.config',
-        'ueditor.parse': 'vendors/ueditor/ueditor.parse.min'
+        'ueditor': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.all.min',
+        'ueditor.config': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.config',
+        'ueditor.parse': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.parse.min'
     },
 
     // 预加载项
     preload: [this.JSON ? '' : 'json', 'jquery'],
 
         // 路径配置
-    paths: {
-        'vendors': '../../vendors',
-    },
+//    paths: {
+//        'vendors': '../../vendors',
+//    },
 
     // 变量配置
     vars: {
