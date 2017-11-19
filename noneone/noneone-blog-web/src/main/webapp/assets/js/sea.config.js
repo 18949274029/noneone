@@ -19,16 +19,13 @@ seajs.config({
 
             /* vendors */
         'bootstrap': 'https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.js',
-        'baguetteBox': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/baguette/baguetteBox.min.js',
+        'baguetteBox': 'https://cdn.bootcss.com/baguettebox.js/1.4.0/baguetteBox.min',
         'layer': 'https://cdn.bootcss.com/layer/2.1/layer.js',
-        'pace': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/pace/pace.min.js',
-        'pjax': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/pjax/jquery.pjax.js',
-        'dmuploader': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/uploader/dmuploader.js',
-        'webuploader.min': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/webuploader/webuploader.min.js',
-        'webuploader.css': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/webuploader/webuploader.css',
-        'jcrop': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/jcrop/jquery.jcrop.min.js',
+        'pace': 'https://cdn.bootcss.com/pace/1.0.2/pace',
+        'pjax': 'https://cdn.bootcss.com/jquery.pjax/1.7.0/jquery.pjax',
+        'jcrop': 'https://cdn.bootcss.com/jquery-jcrop/0.9.12/js/jquery.Jcrop.min',
         'validate': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/validate/jquery-validate.js',
-        'lazyload': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/lazyload/jquery.lazyload.js',
+        'lazyload': 'https://cdn.bootcss.com/jquery_lazyload/1.9.3/jquery.lazyload.js',
 
         'ueditor': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.all.min.js',
         'ueditor.config': 'http://www.noneone.cn:8081/noneoneblog/assets/vendors/ueditor/ueditor.config.js',
