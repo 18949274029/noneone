@@ -1,7 +1,7 @@
 #set($title = "修改用户信息")
 #set($layout="default/layout/columns_full.vm")
 
-<script src="https://www.noneone.cn/static/js/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
+<script src="https://www.noneone.cn/static/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
 
 <div class="panel panel-default stacked">
 	<div class="panel-heading">

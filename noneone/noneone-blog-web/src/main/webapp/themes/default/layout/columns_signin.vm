@@ -19,7 +19,7 @@
 	
 	<!-- JavaScript -->
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-	<script src="https://www.noneone.cn/static/js/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
+	<script src="https://www.noneone.cn/static/noneoneblog/assets/vendors/validate/jquery-validate.js"></script>
 	<script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	
