@@ -142,5 +142,10 @@ public interface PostService {
 
 
 	void resetIndexs();
+	
+	/**
+	 * 根据标题查询文章
+	 */
+	Post findPost(String title);
 
 }

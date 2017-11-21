@@ -484,4 +484,16 @@ public class PostServiceImpl implements PostService {
 		postAttributeDao.save(attr);
 	}
 
+	@Override
+	public Post findPost(String title) {
+		List<PostPO> po = postDao.findByTitle(title);
+		if (po != null && po.size() > 0) {
+			Post post = new Post();
+			BeanUtils.copyProperties(po.get(0), post);
+			return post;
+		}
+		return null;
+
+	}
+
 }

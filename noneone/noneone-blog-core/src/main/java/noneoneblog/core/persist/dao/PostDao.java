@@ -36,5 +36,5 @@ public interface PostDao extends JpaRepository<PostPO, Long>, JpaSpecificationEx
 
 	@Query("select coalesce(max(p.featured), 0) from PostPO p")
 	int maxFeatured();
-	
+	List<PostPO> findByTitle(String title);
 }

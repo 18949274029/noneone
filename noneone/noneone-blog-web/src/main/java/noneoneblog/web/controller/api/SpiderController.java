@@ -42,6 +42,14 @@ public class SpiderController extends BaseController{
 			 text = aes.Decrypt(post);
 			if (text != null && StringUtils.isNotBlank(text)) {
 				Post p = JSONObject.parseObject(text,Post.class);
+				if (p==null||p.getTitle()==null||p.getContent()==null) {
+					return "error";
+				}
+				//先检测有没有重复标题的
+			  Post select_post = postBiz.findPost(p.getTitle());
+				if (select_post!=null) {
+					return "error";
+				}
 				extractImages(p);
 				postBiz.post(p);
 				return "ok";

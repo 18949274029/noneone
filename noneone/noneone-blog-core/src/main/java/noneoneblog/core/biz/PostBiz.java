@@ -110,5 +110,9 @@ public interface PostBiz {
 	 * @param p
 	 */
 	void update(Post p);
+	/**
+	 * 根据标题查询文章
+	 */
+	Post findPost(String title);
 	
 }

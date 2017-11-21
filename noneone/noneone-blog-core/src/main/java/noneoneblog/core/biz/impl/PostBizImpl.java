@@ -150,4 +150,9 @@ public class PostBizImpl implements PostBiz {
 		postService.update(p);
 	}
 
+	@Override
+	public Post findPost(String title) {
+		return postService.findPost(title);
+	}
+
 }
