@@ -23,7 +23,7 @@ import com.alibaba.fastjson.JSONObject;
  *
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/spider")
 public class SpiderController extends BaseController{
 	@Autowired
 	private PostBiz postBiz;
@@ -32,7 +32,7 @@ public class SpiderController extends BaseController{
 	 * @param p
 	 * @return
 	 */
-	@RequestMapping(value = "/login/spiderSubmit", method = RequestMethod.POST)
+	@RequestMapping(value = "/spiderSubmit", method = RequestMethod.POST)
 	public String spiderPost(String post, HttpServletRequest request) {
 		String text = null;
 		try {

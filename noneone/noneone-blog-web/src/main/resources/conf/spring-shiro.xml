@@ -62,6 +62,7 @@
         </property>
         <property name="filterChainDefinitions">
             <value>
+                /spider/** = anon
                 /login = anon
                 /home* = user
                 /home/** = user
