@@ -36,15 +36,16 @@ public class SpiderController extends BaseController{
 	public String spiderPost(String post, HttpServletRequest request) {
 		String text = null;
 		try {
-			text = new String(AESUtil.decrypt(post.getBytes(), "lifeifei168168"), "utf-8");
-		} catch (UnsupportedEncodingException e) {
+			 AESUtil aes = new AESUtil("lifeifei11111111");
+			 text = aes.Decrypt(post);
+			if (text != null && StringUtils.isNotBlank(text)) {
+				Post p = JSONObject.parseObject(text,Post.class);
+				extractImages(p);
+				postBiz.post(p);
+				return "ok";
+			}
+		} catch (Exception e) {
 			return "error";
-		}
-		if (text != null && StringUtils.isNotBlank(text)) {
-			Post p = JSONObject.parseObject(text,Post.class);
-			extractImages(p);
-			postBiz.post(p);
-			return "ok";
 		}
 		return "error";
 	}
