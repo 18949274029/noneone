@@ -323,7 +323,7 @@ public class CallbackController extends BaseController {
                 } else if (e instanceof LockedAccountException) {
                     throw new MtonsException("用户被禁用");
                 } else {
-                    throw new MtonsException("用户认证失败");
+                    throw new MtonsException("用户认证失败或用户名可能被其他账号绑定过");
                 }
             }
             return ret;
