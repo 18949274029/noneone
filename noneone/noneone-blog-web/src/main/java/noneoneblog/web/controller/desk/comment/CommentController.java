@@ -52,11 +52,11 @@ public class CommentController extends BaseController {
 		
 		long pid = ServletRequestUtils.getLongParameter(request, "pid", 0);
 		
-		if (!SecurityUtils.getSubject().isAuthenticated()) {
-			data = Data.failure("请先登录在进行操作");
-			
-			return data;
-		}
+//		if (!SecurityUtils.getSubject().isAuthenticated()) {
+//			data = Data.failure("请先登录在进行操作");
+//			
+//			return data;
+//		}
 		if (toId > 0 && StringUtils.isNotEmpty(text)) {
 			AccountProfile up = getSubject().getProfile();
 			
