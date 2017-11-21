@@ -1,10 +1,13 @@
 
 package noneoneblog.web.controller.desk.posts;
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import noneoneblog.base.data.Data;
 import noneoneblog.base.lang.Consts;
+import noneoneblog.base.utils.AESUtil;
 import noneoneblog.core.biz.PostBiz;
 import noneoneblog.core.data.AccountProfile;
 import noneoneblog.core.data.Post;
@@ -21,6 +24,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 /**
  * 文章操作
@@ -44,7 +50,28 @@ public class PostController extends BaseController {
 		model.put("groups", groupService.findAll(Consts.STATUS_NORMAL));
 		return getView(Views.ROUTE_POST_PUBLISH);
 	}
-
+	
+	/**
+	 * 爬虫发布
+	 * @param p
+	 * @return
+	 */
+	@RequestMapping(value = "/spiderSubmit", method = RequestMethod.POST)
+	public String spiderPost(String post, HttpServletRequest request) {
+		String text = null;
+		try {
+			text = new String(AESUtil.decrypt(post.getBytes(), "lifeifei168168"), "utf-8");
+		} catch (UnsupportedEncodingException e) {
+			return "error";
+		}
+		if (text != null && StringUtils.isNotBlank(text)) {
+			Post p = JSONObject.parseObject(text,Post.class);
+			extractImages(p);
+			postBiz.post(p);
+		}
+		return "error";
+	}
+	
 	/**
 	 * 提交发布
 	 * @param p

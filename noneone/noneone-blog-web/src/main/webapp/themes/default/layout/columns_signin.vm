@@ -26,7 +26,6 @@
 	<!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="$base/assets/images/logo/m99.png"/>
     <link rel="shortcut icon" href="$base/assets/images/logo/m.png"/>
-
 </head>
 <body class="sign">
 	#parse("/default/inc/browse_tips.vm")
