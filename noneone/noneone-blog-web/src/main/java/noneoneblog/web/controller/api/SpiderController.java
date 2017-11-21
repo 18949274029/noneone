@@ -48,7 +48,7 @@ public class SpiderController extends BaseController{
 				//先检测有没有重复标题的
 			  Post select_post = postBiz.findPost(p.getTitle());
 				if (select_post!=null) {
-					return "error";
+					return "repeat";
 				}
 				extractImages(p);
 				postBiz.post(p);
