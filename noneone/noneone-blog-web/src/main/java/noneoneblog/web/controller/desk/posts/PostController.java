@@ -52,27 +52,6 @@ public class PostController extends BaseController {
 	}
 	
 	/**
-	 * 爬虫发布
-	 * @param p
-	 * @return
-	 */
-	@RequestMapping(value = "/spiderSubmit", method = RequestMethod.POST)
-	public String spiderPost(String post, HttpServletRequest request) {
-		String text = null;
-		try {
-			text = new String(AESUtil.decrypt(post.getBytes(), "lifeifei168168"), "utf-8");
-		} catch (UnsupportedEncodingException e) {
-			return "error";
-		}
-		if (text != null && StringUtils.isNotBlank(text)) {
-			Post p = JSONObject.parseObject(text,Post.class);
-			extractImages(p);
-			postBiz.post(p);
-		}
-		return "error";
-	}
-	
-	/**
 	 * 提交发布
 	 * @param p
 	 * @return

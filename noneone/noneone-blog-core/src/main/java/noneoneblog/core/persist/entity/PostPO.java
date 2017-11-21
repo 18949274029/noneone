@@ -22,7 +22,7 @@ import org.hibernate.search.annotations.NumericField;
 
 /**
  * 内容表
- * @author langhsu
+ * @author leisure
  * 
  */
 @Entity

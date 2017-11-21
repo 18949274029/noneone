@@ -1,6 +1,12 @@
 
 package noneoneblog.web.controller;
 
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import noneoneblog.base.utils.AESUtil;
+import noneoneblog.core.data.Post;
 import noneoneblog.web.controller.desk.Views;
 
 import org.apache.commons.lang.StringUtils;
@@ -15,6 +21,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.alibaba.fastjson.JSONObject;
 
 /**
  * 登录页
@@ -77,6 +85,7 @@ public class LoginController extends BaseController {
         return ret;
 	}
 
+	
 //    private void pushBadgesCount() {
 //        new Thread(() -> {
 //
