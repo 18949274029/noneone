@@ -9,7 +9,7 @@
 <body>
     <div class="wrap">
         <div class="main">
-            <a href="${domain}/blog/email/forgot/$!{userId}?code=$!{code}&type=$!{type}">点此链接修改密码</a>
+            <a href="${domain}/blog/email/forgot/$!{userId}?code=$!{code}&type=$!{type}">点此链接修改密码---来自Noneone</a>
         </div>
     </div>
 </body>
