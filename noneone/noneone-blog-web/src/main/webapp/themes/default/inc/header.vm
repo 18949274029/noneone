@@ -66,9 +66,9 @@
 					#end
 					
     			</ul>
-    			<div id="_search_box" class="search-box navbar-left hidden-xs hidden-sm">
+    			<div id="_search_box" class="search-box navbar-left ">
     				<form class="navbar-form" method="get" action="$base/search">
-    					<input type="text" class="form-control" name="q" placeholder="搜索..." required>
+    					<input type="text" maxlength="30"  class="form-control" name="q" placeholder="搜索..." required>
 						<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
     				</form>
     			</div>
