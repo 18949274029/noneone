@@ -1,0 +1,19 @@
+#set($title="APP下载")
+
+<div class="shadow-box">
+	<h1 class="post-title">APP下载</h1>
+	<div class="clearfix post-other">
+		<span class="pull-left author">
+			请扫描二维码下载APP安装包--安卓版
+		</span>
+	</div>
+	<div class="post-frame">
+		<div class="post-content">
+			<a title="Noneone-APP二维码" href="https://www.noneone.cn/static/apk/apk.png">
+			<img src="https://www.noneone.cn/static/apk/apk.png" data-original="https://www.noneone.cn/static/apk/apk.png" >
+             </a>
+         </div>
+		<div class="post-footer">
+		</div>
+	</div>
+</div>

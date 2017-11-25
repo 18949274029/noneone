@@ -64,6 +64,9 @@
     					<a href="$base/g/${row.key}" nav="${row.name}">${row.name}</a>
     				</li>
 					#end
+					<li>
+    					<a href="$base/app/appInfo" nav="APP">APP</a>
+    				</li>
 					
     			</ul>
     			<div id="_search_box" class="search-box navbar-left ">
