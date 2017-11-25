@@ -48,7 +48,7 @@
         </div>
         <div class="cbox-post">
             <div class="cbox-input">
-                <textarea id="chat_text" rows="3" placeholder="请输入评论内容"></textarea>
+                <textarea id="chat_text" rows="3" placeholder="请输入评论内容" maxlength="600"></textarea>
                 <input type="hidden" value="0" name="chat_pid" id="chat_pid"/>
             </div>
             <div class="cbox-ats clearfix">
