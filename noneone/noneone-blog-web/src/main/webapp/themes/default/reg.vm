@@ -18,7 +18,7 @@
         </div>
         <label for="id_name">昵称:</label>
         <div id="id_name">
-            <input maxlength="9" class="form-control border" name="name" value="$!post.name" placeholder="昵称" type="text" data-required>
+            <input maxlength="6" class="form-control border" name="name" value="$!post.name" placeholder="昵称" type="text" data-required>
         </div>
         <label for="id_name">邮箱:</label>
         <div id="id_name">
