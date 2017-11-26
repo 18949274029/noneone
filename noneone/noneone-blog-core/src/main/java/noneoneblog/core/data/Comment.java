@@ -19,7 +19,7 @@ public class Comment extends CommentPO implements Serializable {
 	private Comment parent;
 	private Post post;
 
-	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm")
 	public Date getCreated() {
 		return super.getCreated();
 	}
