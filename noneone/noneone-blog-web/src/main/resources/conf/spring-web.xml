@@ -15,9 +15,7 @@
 	</bean>
 
 	<bean class="noneoneblog.web.exceptions.DefaultExceptionHandler"/>
-
     <!--
-	
 	文件绝对路径存储：
     <bean id="fileRepo" class="noneoneblog.base.upload.impl.FileRepoImpl" />
     
