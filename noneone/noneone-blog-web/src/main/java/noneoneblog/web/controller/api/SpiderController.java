@@ -65,7 +65,7 @@ public class SpiderController extends BaseController{
 	 * 百度推送
 	 * id 文章列表大于id的
 	 */
-	@RequestMapping(value = "/pushBaidu", method = RequestMethod.POST)
+	@RequestMapping(value = "/pushBaidu")
 	 @ResponseBody
 	public String pushBaidu(String id, HttpServletRequest request) {
 		if (StringUtils.isEmpty(id)) {
