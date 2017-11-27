@@ -1,6 +1,7 @@
 
 package noneoneblog.core.persist.service.impl;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -494,6 +495,11 @@ public class PostServiceImpl implements PostService {
 		}
 		return null;
 
+	}
+
+	@Override
+	public List<BigInteger> getIDsRTId(BigInteger id) {
+		return postDao.getIDsRTId(Long.parseLong(id+""));
 	}
 
 }

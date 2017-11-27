@@ -34,7 +34,22 @@
 			</div>
 		</div>
 	</div>
-
+<!-- 广告位：右侧侧边栏广告 -->
+<body>
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '5377112',
+        container: s,
+        size: '234,60',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+<script src="https://dup.baidustatic.com/js/os.js"></script>
+</body>
 	#parse("/default/inc/footer.vm")
 
 </body>

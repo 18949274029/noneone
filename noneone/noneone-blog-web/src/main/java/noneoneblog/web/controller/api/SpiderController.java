@@ -1,6 +1,7 @@
 package noneoneblog.web.controller.api;
 
 import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -58,5 +59,19 @@ public class SpiderController extends BaseController{
 			return "error";
 		}
 		return "error";
+	}
+	
+	/**
+	 * 百度推送
+	 * id 文章列表大于id的
+	 */
+	@RequestMapping(value = "/pushBaidu", method = RequestMethod.POST)
+	 @ResponseBody
+	public String pushBaidu(String id, HttpServletRequest request) {
+		if (StringUtils.isEmpty(id)) {
+			return "id is null";
+		}
+		String result = postBiz.pushBaidu(new BigInteger(id));
+		return result;
 	}
 }

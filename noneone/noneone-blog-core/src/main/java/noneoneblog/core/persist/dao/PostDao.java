@@ -1,6 +1,7 @@
 
 package noneoneblog.core.persist.dao;
 
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.List;
 
@@ -36,5 +37,9 @@ public interface PostDao extends JpaRepository<PostPO, Long>, JpaSpecificationEx
 
 	@Query("select coalesce(max(p.featured), 0) from PostPO p")
 	int maxFeatured();
+	
+	@Query("select id from PostPO p where id >?1")
+	List<BigInteger> getIDsRTId(Long id);
+	
 	List<PostPO> findByTitle(String title);
 }

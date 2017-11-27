@@ -10,6 +10,7 @@
 	<packaging>war</packaging>
     <version>0.0.1</version>
 	<dependencies>
+		
 		<dependency>
 			<groupId>com.noneone.blog</groupId>
 			<artifactId>noneone-blog-core</artifactId>

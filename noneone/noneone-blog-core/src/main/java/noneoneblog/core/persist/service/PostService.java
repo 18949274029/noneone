@@ -1,6 +1,7 @@
 
 package noneoneblog.core.persist.service;
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -147,5 +148,10 @@ public interface PostService {
 	 * 根据标题查询文章
 	 */
 	Post findPost(String title);
-
+	/**
+	 * 比id更大的文章id集合
+	 * @param id
+	 * @return
+	 */
+    List<BigInteger> getIDsRTId(BigInteger id);
 }

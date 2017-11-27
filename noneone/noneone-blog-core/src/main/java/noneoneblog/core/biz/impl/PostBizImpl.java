@@ -1,6 +1,7 @@
 
 package noneoneblog.core.biz.impl;
 
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import noneoneblog.core.event.FeedsEvent;
 import noneoneblog.core.persist.service.AttachService;
 import noneoneblog.core.persist.service.FeedsService;
 import noneoneblog.core.persist.service.PostService;
+import noneoneblog.core.persist.utils.Http4ClientUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -153,6 +155,27 @@ public class PostBizImpl implements PostBiz {
 	@Override
 	public Post findPost(String title) {
 		return postService.findPost(title);
+	}
+
+	@Override
+	public String pushBaidu(BigInteger id) {
+		String result = null;
+		try{
+		List<BigInteger> ids = postService.getIDsRTId(id);
+		if (ids!=null&&ids.size()>0) {
+			String parames = "";
+			for (int i = 0; i < ids.size(); i++) {
+				parames += "https://www.noneone.cn/view/"+ids.get(i)+"\n";
+			}
+			String url = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
+			result = Http4ClientUtil.postPlain(url, parames);
+		}else{
+			result="查无推送数据!";
+		}
+		}catch(Exception e){
+			result="推送失败!";
+		}
+		return result;
 	}
 
 }

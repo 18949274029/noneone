@@ -9,6 +9,11 @@
 	<artifactId>noneone-blog-core</artifactId>
 	<version>0.0.1</version>
 	<dependencies>
+			<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>

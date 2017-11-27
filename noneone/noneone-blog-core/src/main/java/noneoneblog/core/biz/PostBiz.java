@@ -1,5 +1,6 @@
 package noneoneblog.core.biz;
 
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.List;
 
@@ -114,5 +115,7 @@ public interface PostBiz {
 	 * 根据标题查询文章
 	 */
 	Post findPost(String title);
+	
+	String pushBaidu(BigInteger id);
 	
 }
