@@ -77,10 +77,10 @@
 			<li><a class="prev" href="${cURL}${prev}" pageNo="1">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a></li>
 		#end
 
-		#set($totalNo = ${span} * 2 + 3)  
-		#set($totalNo1 = $totalNo - 1)  
+		#set($totalNo = ${span} * 2 + 3)
+		#set($totalNo1 = $totalNo - 1)
 		#if($p.totalPages gt $totalNo)
-			#if($pageNo le ($span + 2))  
+			#if($pageNo le ($span + 2))
 				#foreach($i in [1..$totalNo1])
 					#link(${p.pageNo}, $i, $cURL)
 				#end
@@ -96,8 +96,8 @@
 			#else
 				#link(${p.number}, 1, $cURL)
 				#link(0 0 "#")
-				#set($num = ${p.pageNo}-${span})
-				#set($num2 = ${p.pageNo}+$span)
+				#set($num = ${pageNo}-${span})
+				#set($num2 = ${pageNo}+${span})
 				#foreach($i in [$num..$num2])
 					#link($pageNo, $i, $cURL)
 				#end
@@ -106,7 +106,7 @@
 			#end
 		#elseif ($p.totalPages gt 1)
 			#foreach($i in [1..$p.totalPages])
-				#link(${p.pageNo}, $i, $cURL)
+				#link(${pageNo}, $i, $cURL)
 			#end
 		#else
 			#link(1, 1, $cURL)

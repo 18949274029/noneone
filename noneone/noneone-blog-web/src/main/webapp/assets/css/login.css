@@ -49,12 +49,14 @@ input[type=text],input[type=password],textarea {
 }
 
 .sign .login {
-	width: 400px;
-	padding: 60px 60px 40px;
+	width: 300px;
+	padding: 40px 60px 40px;
 	background: #fff;
 	text-align: center;
 	margin: 40px auto 20px;
 	overflow: hidden;
+	border-radius:5%;
+	height:690px;
 }
 
 .sign .login h1 {
