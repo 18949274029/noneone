@@ -29,8 +29,8 @@
 	 <link rel="stylesheet" href="https://cnstatic01.e.vhall.com/static/css/project/account/login.css?v=20171116">
 </head>
 <body class="sign">
-	 <div class="index-main-body" id="particles-js" onselectstart="return false;" style="-moz-user-select:none;font-size:initial;">
-        <div class="index-main" data-init="account/login">
+	 <div class="index-main-body" id="particles-js" onselectstart="return false;" style="-moz-user-select:none;font-size:x-small;">
+        <div class="index-main" data-init="account/login" style="top:0%;margin-top:0px;">
 			
 	#parse("/default/inc/browse_tips.vm")
 	
@@ -39,10 +39,10 @@
 	   </div>
         <div class="page-bg"></div>
     </div>
-	<p class="small">
+	<div>
+	<p class="small" style="padding-top:150px">
 		$!{site_copyright} <a href="http://www.miitbeian.gov.cn/" target="_blank">$!{site_icp}
 	</p>
-	
     <script type="text/javascript" id="seajsnode" 3rdlibs="https://cnstatic01.e.vhall.com/3rdlibs" src="https://cnstatic01.e.vhall.com/static/js/vendor.js?v=20171116"></script>
     <script src="https://cnstatic01.e.vhall.com/3rdlibs/yidun/captcha/load.min.js"></script>
     <script type="text/javascript">
