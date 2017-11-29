@@ -14,7 +14,8 @@ import noneoneblog.core.persist.service.CommentService;
 import noneoneblog.web.controller.BaseController;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.shiro.SecurityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.Page;
@@ -33,6 +34,7 @@ import org.springframework.web.util.HtmlUtils;
 @Controller
 @RequestMapping("/comment")
 public class CommentController extends BaseController {
+	private static final Logger logger = LoggerFactory.getLogger(CommentController.class);
 	@Autowired
 	private CommentService commentService;
 	@Autowired
@@ -49,7 +51,7 @@ public class CommentController extends BaseController {
 	public @ResponseBody
 	Data post(Long toId, String text, HttpServletRequest request) {
 		Data data = Data.failure("操作失败");
-		
+		logger.info("评论开始");
 		long pid = ServletRequestUtils.getLongParameter(request, "pid", 0);
 		
 //		if (!SecurityUtils.getSubject().isAuthenticated()) {
