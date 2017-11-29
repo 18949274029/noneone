@@ -55,7 +55,7 @@ input[type=text],input[type=password],textarea {
 	text-align: center;
 	margin: 40px auto 20px;
 	overflow: hidden;
-	border-radius:21%;
+	border-radius:5%;
 	height:690px;
 }
 
