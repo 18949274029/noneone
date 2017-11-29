@@ -71,7 +71,7 @@
 			#set($cURL=($url + "?pn="))
 		#end
 
-	<ul class="pagination">
+	<ul class="pagination" style="font-size:xx-small;">
 		#if($pageNo gt 1)
 			#set($prev = $pageNo - 1)
 			<li><a class="prev" href="${cURL}${prev}" pageNo="1">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a></li>
