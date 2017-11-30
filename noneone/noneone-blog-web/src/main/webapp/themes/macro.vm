@@ -64,7 +64,7 @@
 	#if($p)
 		#set($span = (${maxList} - 3)/2)
 		#set($__pc = $p.totalPages)
-		#set($pageNo = $p.number + 1)
+		#set($pageNo = $p.number + 1)  
 		#if($url.indexOf("?") != -1)
 			#set($cURL=($url + "&pn="))
 		#else
@@ -82,19 +82,19 @@
 		#if($p.totalPages gt $totalNo)
 			#if($pageNo le ($span + 2))
 				#foreach($i in [1..$totalNo1])
-					#link(${p.pageNo}, $i, $cURL)
+					#link(${pageNo}, $i, $cURL)
 				#end
 				#link(0, 0, "#")
-				#link(${p.number}, ${p.TotalPages}, $cURL)
+				#link(${pageNo}, ${p.TotalPages}, $cURL)
 			#elseif($pageNo > ($p.totalPages - (${span} + 2)))
-				#link(${p.number}, 1, ${cURL})
+				#link(${pageNo}, 1, ${cURL})
 				#link(0, 0, "#")
 				#set($num = ${p.TotalPages} - ${totalNo} + 2)
 				#foreach($i in [$num..${p.TotalPages}])
-					#link(${p.number}, ${i}, ${cURL})
+					#link(${pageNo}, ${i}, ${cURL})
 				#end
 			#else
-				#link(${p.number}, 1, $cURL)
+				#link(${pageNo}, 1, $cURL)
 				#link(0 0 "#")
 				#set($num = ${pageNo}-${span})
 				#set($num2 = ${pageNo}+${span})
