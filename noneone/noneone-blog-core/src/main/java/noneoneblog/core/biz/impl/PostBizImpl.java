@@ -15,6 +15,8 @@ import noneoneblog.core.persist.service.FeedsService;
 import noneoneblog.core.persist.service.PostService;
 import noneoneblog.core.persist.utils.Http4ClientUtil;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -39,7 +41,7 @@ public class PostBizImpl implements PostBiz {
 	private FileRepo fileRepo;
 	@Autowired
 	private ApplicationContext applicationContext;
-
+	private static final Logger logger = LoggerFactory.getLogger(PostBizImpl.class);
 	/**
 	 * 分页查询文章, 带缓存
 	 * - 缓存key规则: list_分组ID排序方式_页码_每页条数
@@ -167,6 +169,7 @@ public class PostBizImpl implements PostBiz {
 			for (int i = 0; i < ids.size(); i++) {
 				parames += "https://www.noneone.cn/view/"+ids.get(i)+"\n";
 			}
+			logger.info("百度推送数据:"+parames);
 			String url = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
 			result = Http4ClientUtil.postPlain(url, parames);
 		}else{
