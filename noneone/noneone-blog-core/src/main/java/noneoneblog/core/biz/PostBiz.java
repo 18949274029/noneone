@@ -116,6 +116,6 @@ public interface PostBiz {
 	 */
 	Post findPost(String title);
 	
-	String pushBaidu(Long start,Long end);
+	String pushBaidu(Long start,Long end,String type);
 	
 }

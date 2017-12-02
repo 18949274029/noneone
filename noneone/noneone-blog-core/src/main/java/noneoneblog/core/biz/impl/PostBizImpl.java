@@ -15,6 +15,7 @@ import noneoneblog.core.persist.service.FeedsService;
 import noneoneblog.core.persist.service.PostService;
 import noneoneblog.core.persist.utils.Http4ClientUtil;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -161,8 +162,8 @@ public class PostBizImpl implements PostBiz {
 	}
 
 	@Override
-	public String pushBaidu(Long start,Long end) {
-		String result = null;
+	public String pushBaidu(Long start,Long end,String type) {
+		String result = "";
 		try{
 		List<BigInteger> ids = postService.getIDsRTId(start,end);
 		if (ids!=null&&ids.size()>0) {
@@ -170,11 +171,23 @@ public class PostBizImpl implements PostBiz {
 			for (int i = 0; i < ids.size(); i++) {
 				parames += "https://www.noneone.cn/view/"+ids.get(i)+"\n";
 			}
-			logger.info("百度推送数据:"+parames);
+			if (StringUtils.isEmpty(parames)) {
+				return result;
+			}
 			String baiduUrl = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
 			String xiongzhangUrl = "http://data.zz.baidu.com/urls?appid=1584575763642072&token=KqRNDfiT2iWzKsuF&type=realtime";
-			result = Http4ClientUtil.postPlain(baiduUrl, parames);
-			result+=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
+			switch (type) {
+			case "1":
+				result += Http4ClientUtil.postPlain(baiduUrl, parames);
+				break;
+			case "2":
+				result +=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
+				break;
+			default:
+				result += Http4ClientUtil.postPlain(baiduUrl, parames);
+				result +=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
+				break;
+			}
 		}else{
 			result="查无推送数据!";
 		}

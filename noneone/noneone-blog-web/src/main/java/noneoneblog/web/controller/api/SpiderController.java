@@ -67,11 +67,10 @@ public class SpiderController extends BaseController{
 	 */
 	@RequestMapping(value = "/pushBaidu")
 	 @ResponseBody
-	public String pushBaidu(String start,String end, HttpServletRequest request) {
+	public String pushBaidu(String start,String end,String type, HttpServletRequest request) {
 		if (StringUtils.isEmpty(start)||StringUtils.isEmpty(end)) {
 			return "id is null";
 		}
-		String result = postBiz.pushBaidu(new Long(start),new Long(end));
-		return result;
+		return postBiz.pushBaidu(new Long(start),new Long(end),type);
 	}
 }
