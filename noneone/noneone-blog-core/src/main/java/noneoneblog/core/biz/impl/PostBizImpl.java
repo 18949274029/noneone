@@ -162,7 +162,7 @@ public class PostBizImpl implements PostBiz {
 	}
 
 	@Override
-	public String pushBaidu(Long start,Long end,String type) {
+	public String pushBaidu(Long start,Long end,int type) {
 		String result = "";
 		try{
 		List<BigInteger> ids = postService.getIDsRTId(start,end);
@@ -177,15 +177,17 @@ public class PostBizImpl implements PostBiz {
 			String baiduUrl = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
 			String xiongzhangUrl = "http://data.zz.baidu.com/urls?appid=1584575763642072&token=KqRNDfiT2iWzKsuF&type=realtime";
 			switch (type) {
-			case "1":
+			case 0:
+				result += Http4ClientUtil.postPlain(baiduUrl, parames);
+				result +=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
+				break;
+			case 1:
 				result += Http4ClientUtil.postPlain(baiduUrl, parames);
 				break;
-			case "2":
+			case 2:
 				result +=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
 				break;
 			default:
-				result += Http4ClientUtil.postPlain(baiduUrl, parames);
-				result +=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
 				break;
 			}
 		}else{
