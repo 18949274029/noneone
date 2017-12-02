@@ -38,8 +38,8 @@ public interface PostDao extends JpaRepository<PostPO, Long>, JpaSpecificationEx
 	@Query("select coalesce(max(p.featured), 0) from PostPO p")
 	int maxFeatured();
 	
-	@Query("select id from PostPO p where id >?1")
-	List<BigInteger> getIDsRTId(Long id);
+	@Query("select id from PostPO p where id >=?1 and id<=?2")
+	List<BigInteger> getIDsRTId(Long start,Long end);
 	
 	List<PostPO> findByTitle(String title);
 }

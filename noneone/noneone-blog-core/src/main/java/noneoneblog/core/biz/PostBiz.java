@@ -50,7 +50,7 @@ public interface PostBiz {
 	 * 
 	 * @param post
 	 */
-	void post(Post post);
+	long post(Post post);
 
 	/**
 	 * 修改文章推荐状态
@@ -116,6 +116,6 @@ public interface PostBiz {
 	 */
 	Post findPost(String title);
 	
-	String pushBaidu(BigInteger id);
+	String pushBaidu(Long start,Long end);
 	
 }

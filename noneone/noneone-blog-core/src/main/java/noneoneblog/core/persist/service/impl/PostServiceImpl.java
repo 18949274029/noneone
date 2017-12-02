@@ -498,8 +498,8 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
-	public List<BigInteger> getIDsRTId(BigInteger id) {
-		return postDao.getIDsRTId(Long.parseLong(id+""));
+	public List<BigInteger> getIDsRTId(Long start,Long end) {
+		return postDao.getIDsRTId(start,end);
 	}
 
 }

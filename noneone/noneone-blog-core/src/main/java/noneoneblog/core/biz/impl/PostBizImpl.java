@@ -70,13 +70,14 @@ public class PostBizImpl implements PostBiz {
 
 	@Override
 	@CacheEvict(value = "postsCaches", allEntries = true)
-	public void post(Post post) {
+	public long post(Post post) {
 		long id = postService.post(post);
 
 		FeedsEvent event = new FeedsEvent("feedsEvent");
 		event.setPostId(id);
 		event.setAuthorId(post.getAuthorId());
 		applicationContext.publishEvent(event);
+		return id;
 	}
 
 	@Override
@@ -160,18 +161,20 @@ public class PostBizImpl implements PostBiz {
 	}
 
 	@Override
-	public String pushBaidu(BigInteger id) {
+	public String pushBaidu(Long start,Long end) {
 		String result = null;
 		try{
-		List<BigInteger> ids = postService.getIDsRTId(id);
+		List<BigInteger> ids = postService.getIDsRTId(start,end);
 		if (ids!=null&&ids.size()>0) {
 			String parames = "";
 			for (int i = 0; i < ids.size(); i++) {
 				parames += "https://www.noneone.cn/view/"+ids.get(i)+"\n";
 			}
 			logger.info("百度推送数据:"+parames);
-			String url = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
-			result = Http4ClientUtil.postPlain(url, parames);
+			String baiduUrl = "http://data.zz.baidu.com/urls?site=https://www.noneone.cn&token=K2mOB2ps0dPa1wVj";
+			String xiongzhangUrl = "http://data.zz.baidu.com/urls?appid=1584575763642072&token=KqRNDfiT2iWzKsuF&type=realtime";
+			result = Http4ClientUtil.postPlain(baiduUrl, parames);
+			result+=Http4ClientUtil.postPlain(xiongzhangUrl, parames);
 		}else{
 			result="查无推送数据!";
 		}

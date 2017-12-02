@@ -153,5 +153,5 @@ public interface PostService {
 	 * @param id
 	 * @return
 	 */
-    List<BigInteger> getIDsRTId(BigInteger id);
+    List<BigInteger> getIDsRTId(Long start,Long end);
 }

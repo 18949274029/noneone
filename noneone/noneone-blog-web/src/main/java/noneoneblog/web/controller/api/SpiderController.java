@@ -52,8 +52,8 @@ public class SpiderController extends BaseController{
 					return "repeat";
 				}
 				extractImages(p);
-				postBiz.post(p);
-				return "ok";
+				long id = postBiz.post(p);
+				return "ok,"+id;
 			}
 		} catch (Exception e) {
 			return "error";
@@ -67,11 +67,11 @@ public class SpiderController extends BaseController{
 	 */
 	@RequestMapping(value = "/pushBaidu")
 	 @ResponseBody
-	public String pushBaidu(String id, HttpServletRequest request) {
-		if (StringUtils.isEmpty(id)) {
+	public String pushBaidu(String start,String end, HttpServletRequest request) {
+		if (StringUtils.isEmpty(start)||StringUtils.isEmpty(end)) {
 			return "id is null";
 		}
-		String result = postBiz.pushBaidu(new BigInteger(id));
+		String result = postBiz.pushBaidu(new Long(start),new Long(end));
 		return result;
 	}
 }
