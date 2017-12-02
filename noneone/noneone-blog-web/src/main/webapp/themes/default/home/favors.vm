@@ -59,7 +59,7 @@
 								</li>
 							#end
 						</ul>
-                        <div class="pull-right hidden-xs">
+                        <div class="pull-right">
                             <a class="act" href="javascript:void(0);" data-evt="unfavor" data-id="${row.post.id}">取消喜欢</a>
                         </div>
 					</div>

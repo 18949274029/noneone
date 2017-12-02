@@ -26,7 +26,7 @@
     </div>
     <div class="summary">
 		<a href="$base/view/${row.id}">
-        	<div class="title"> #if($row.featured > 0)<image src="$base/assets/images/stick.png"/> #end  #showGroup($row true)<h2>$!{row.title}</h2></div>
+        	<div class="title"> #if($row.featured > 0)<image src="$base/assets/images/stick.png"/>#end  #showGroup($row true)<h2>$!{row.title}</h2></div>
         	<div class="excerpt wordbreak hidden-xs">$!{row.summary} </div>
         </a>
 		<!--前端图片显示样式-->

@@ -16,7 +16,7 @@
 					<div class="author">
 						<time>$relDate.format($row.created)</time>
 					</div>
-					<div class="pull-right hidden-xs">
+					<div class="pull-right">
 						<a class="act" href="javascript:void(0);" data-evt="trash" data-id="${row.id}">删除</a>
 					</div>
 				</div>

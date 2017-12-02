@@ -26,7 +26,7 @@
 							<span>文章数 ${row.posts}</span>
 							<span>评论数 ${row.comments}</span>
 						</div>
-						<div class="pull-right hidden-xs">
+						<div class="pull-right">
 							<a class="btn btn-success btn-xs" href="javascript:void(0);" data-id="${row.id}" rel="unfollow" style="color: #fff;">取消关注</a>
 						</div>
 					</div>
