@@ -65,6 +65,9 @@
     				</li>
 					#end
 					<li>
+    					<a href="$base/game/list" nav="游戏" >游戏</a>
+    				</li>
+					<li>
     					<a href="$base/app/appInfo" nav="APP">APP</a>
     				</li>
 					

@@ -1,0 +1,16 @@
+    		<div class="widget-box shadow-box">
+			<ul class="box-list">
+    		#foreach($row in $page.content)
+            <li class="cat-item cat-item-6"><span>
+			 <a href="${row.url}" target="_blank">$row.name</a>
+           </span>
+			#end
+			</li>
+            </ul>	
+			</div>
+    
+    		#if($page.content.size() == 0)
+    		<div class="stream-item">
+    			暂无游戏 !
+    		</div>
+           #end

@@ -11,6 +11,7 @@ import noneoneblog.core.data.Comment;
 import noneoneblog.core.data.Favor;
 import noneoneblog.core.data.Feeds;
 import noneoneblog.core.data.FriendLink;
+import noneoneblog.core.data.Game;
 import noneoneblog.core.data.Group;
 import noneoneblog.core.data.Notify;
 import noneoneblog.core.data.Post;
@@ -22,6 +23,7 @@ import noneoneblog.core.persist.entity.CommentPO;
 import noneoneblog.core.persist.entity.FavorPO;
 import noneoneblog.core.persist.entity.FeedsPO;
 import noneoneblog.core.persist.entity.FriendLinkPO;
+import noneoneblog.core.persist.entity.GamePO;
 import noneoneblog.core.persist.entity.GroupPO;
 import noneoneblog.core.persist.entity.NotifyPO;
 import noneoneblog.core.persist.entity.PostPO;
@@ -149,6 +151,12 @@ public class BeanMapUtils {
 
 	public static FriendLink copy(FriendLinkPO po) {
 		FriendLink ret = new FriendLink();
+		BeanUtils.copyProperties(po, ret);
+		return ret;
+	}
+	
+	public static Game copy(GamePO po) {
+		Game ret = new Game();
 		BeanUtils.copyProperties(po, ret);
 		return ret;
 	}
