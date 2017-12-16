@@ -126,7 +126,8 @@
 	#if ($idx == 0)
 		<li><span>...</span></li>
     #elseif ($pageNo == $idx)
-		<li class="active"><a href="javascript:void(0);"><span>${pageNo}</span></a></li>
+		<input id="pageNo" type="hidden" value="${pageNo}">
+		<li class="active"><a href="javascript:void(0);"><span >${pageNo}</span></a></li>
     #else
 		<li><a href="${url}${idx}">${idx}</a></li>
     #end

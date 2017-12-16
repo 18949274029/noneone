@@ -40,7 +40,6 @@ public class PostController extends BaseController {
 	private PostBiz postBiz;
 	@Autowired
 	private GroupService groupService;
-
 	/**
 	 * 发布文章页
 	 * @return
@@ -100,7 +99,7 @@ public class PostController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping("/to_update/{id}")
-	public String toUpdate(@PathVariable Long id, ModelMap model) {
+	public String toUpdate(@PathVariable Long id,String pageNo, ModelMap model) {
 		AccountProfile up = getSubject().getProfile();
 		Post ret = postBiz.getPost(id);
 
@@ -110,6 +109,7 @@ public class PostController extends BaseController {
 
 		model.put("groups", groupService.findAll(Consts.STATUS_NORMAL));
 		model.put("view", ret);
+		model.put("pageNo", pageNo);
 		return getView(Views.ROUTE_POST_UPDATE);
 	}
 
@@ -119,7 +119,7 @@ public class PostController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String subUpdate(Post p, HttpServletRequest request) {
+	public String subUpdate(Post p,String pageNo, HttpServletRequest request) {
 		AccountProfile up = getSubject().getProfile();
 		if (p != null && p.getAuthorId() == up.getId()) {
 			String content = request.getParameter("content");
@@ -127,7 +127,7 @@ public class PostController extends BaseController {
 			extractImages(p);
  			postBiz.update(p);
 		}
-		return Views.REDIRECT_HOME_POSTS;
+		return Views.REDIRECT_HOME_POSTS+"&pn="+pageNo;
 	}
 
 }

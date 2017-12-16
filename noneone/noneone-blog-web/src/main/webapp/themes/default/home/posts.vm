@@ -98,7 +98,8 @@ $(function() {
 	// edit
 	$('a[data-evt=edit]').click(function () {
 		var id = $(this).attr('data-id');
-		window.location.href='$base/post/to_update/' + id;
+		var pageNo = $("#pageNo").val();
+		window.location.href='$base/post/to_update/' + id+"?pageNo="+pageNo;
 	});
 })
 </script>

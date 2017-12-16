@@ -1,10 +1,9 @@
 package noneoneblog.plugin.example;
 
 import noneoneblog.core.event.FeedsEvent;
-
+import noneoneblog.core.hook.event.FeedsEventHook;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
-import noneoneblog.core.hook.event.FeedsEventHook;
 /**
  * @author leisure
  */
