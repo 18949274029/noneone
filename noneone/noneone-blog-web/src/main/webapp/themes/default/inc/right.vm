@@ -18,16 +18,20 @@
 		<li class="text-center"><img src="$base/assets/images/spinner.gif"></li>
 	</ul>
 </div>
-
-<div class="widget-box shadow-box">
-	<div class="title">
-		<h3><i class="fa fa-bars"></i> 最新发布</h3>
-	</div>
-	<ul class="box-list" id="latests">
-        <li class="text-center"><img src="$base/assets/images/spinner.gif"></li>
-	</ul>
-</div>
-
+##
+##<div class="widget-box shadow-box">
+##	<div class="title">
+##		<h3><i class="fa fa-bars"></i> 最新发布</h3>
+##	</div>
+##	<ul class="box-list" id="latests">
+##        <li class="text-center"><img src="$base/assets/images/spinner.gif"></li>
+##	</ul>
+##</div>
+<script type="text/javascript">
+    /*270*270 创建于 2018/1/13*/
+    var cpro_id = "u3185519";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>
 <script type="text/javascript">
 var hot_li_template = '<li><div class="li-out"><span class="last"><i>{0}</i></span><span class="name"><a  href="{1}">{2}</a></span><span class="nums">{3}</span></div></li>'
 var latest_li_template = '<li><div class="li-out"><span class="name"><a  href="{1}">{2}</a></span><span class="nums">{3}</span></div></li>'
