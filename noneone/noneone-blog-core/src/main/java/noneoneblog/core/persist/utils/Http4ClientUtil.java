@@ -119,7 +119,6 @@ public class Http4ClientUtil {
     /**
      * 获取HttpClient对象
      * 
-     * @param url:http://dev.mp.zhongan.com/
      * @return
      */
     public static CloseableHttpClient getHttpClient(String url) {
