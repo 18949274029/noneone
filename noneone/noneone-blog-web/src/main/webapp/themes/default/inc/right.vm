@@ -27,11 +27,6 @@
 ##        <li class="text-center"><img src="$base/assets/images/spinner.gif"></li>
 ##	</ul>
 ##</div>
-<script type="text/javascript">
-    /*237*250 创建于 2018/1/13*/
-    var cpro_id = "u3185559";
-</script>
-<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>
 
 <script type="text/javascript">
 var hot_li_template = '<li><div class="li-out"><span class="last"><i>{0}</i></span><span class="name"><a  href="{1}">{2}</a></span><span class="nums">{3}</span></div></li>'
