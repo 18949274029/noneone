@@ -1,14 +1,6 @@
 
 package noneoneblog.web.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import noneoneblog.base.context.AppContext;
 import noneoneblog.base.upload.FileRepoFactory;
 import noneoneblog.base.utils.MD5;
@@ -17,7 +9,6 @@ import noneoneblog.core.data.Attach;
 import noneoneblog.core.data.Post;
 import noneoneblog.shiro.authc.AccountSubject;
 import noneoneblog.web.formatter.StringEscapeEditor;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -35,6 +26,13 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Controller 基类
@@ -191,6 +189,11 @@ public class BaseController {
 			if (request.getContextPath().length() > 1 && imageUrl.startsWith(request.getContextPath())) {
 				imageUrl = imageUrl.replace(request.getContextPath(), "");
 			}
+			//处理来自csdn图片链接访问限制
+			if(imageUrl.contains("csdn")){
+				imageUrl = imageUrl.substring(0,imageUrl.indexOf("?"));
+			}
+
 			Attach a = new Attach();
 			a.setOriginal(imageUrl);
 			a.setPreview(imageUrl);
