@@ -189,10 +189,10 @@ public class BaseController {
 			if (request.getContextPath().length() > 1 && imageUrl.startsWith(request.getContextPath())) {
 				imageUrl = imageUrl.replace(request.getContextPath(), "");
 			}
-			//处理来自csdn图片链接访问限制
-			if(imageUrl.contains("csdn")){
-				imageUrl = imageUrl.substring(0,imageUrl.indexOf("?"));
-			}
+//			//处理来自csdn图片链接访问限制
+//			if(imageUrl.contains("csdn")){
+//				imageUrl = imageUrl.substring(0,imageUrl.indexOf("?"));
+//			}
 
 			Attach a = new Attach();
 			a.setOriginal(imageUrl);
